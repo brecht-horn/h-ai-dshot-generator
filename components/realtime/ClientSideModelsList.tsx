@@ -73,7 +73,7 @@ export default function ClientSideModelsList({
       {models && models.length === 0 && (
         <div className="flex flex-col gap-4 items-center">
           <FaImages size={64} className="text-gray-500" />
-          <h1 className="text-2xl">
+          <h1 className="text-2xl text-white">
             Get started by training your first model.
           </h1>
           <div>
