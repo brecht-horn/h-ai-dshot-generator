@@ -5,17 +5,21 @@ import result from '/public/result.png';
 export default function ExplainerSection() {
   return (
     <div className='w-full max-w-6xl mt-16 p-8 bg-[#131324] rounded-lg space-y-8'>
-      <h2 className='text-3xl font-bold text-center mb-8'>How It Works</h2>
+      <h2 className='text-3xl font-bold text-violet-400/100 text-center mb-8'>
+        How It Works
+      </h2>
 
       {/* Step 1: Upload your images */}
       <div className='space-y-4'>
         <div className='flex items-center justify-center space-x-4'>
-          <div className='text-3xl font-bold text-blue-600 bg-white border-2 border-blue-600 rounded-full w-10 h-10 flex items-center justify-center'>
+          <div className='text-3xl font-bold text-sky-400 bg-transparent border-2 border-sky-400 rounded-full w-10 h-10 flex items-center justify-center'>
             1
           </div>
-          <h3 className='text-2xl font-semibold'>Upload your images</h3>
+          <h3 className='text-2xl text-sky-400 font-semibold'>
+            Upload your images
+          </h3>
         </div>
-        <p className='text-sm text-gray-600 text-center'>
+        <p className='text-sm text-gray-400 text-center'>
           Upload 4+ high-quality selfies: front facing, 1 person in frame, no
           glasses or hats.
         </p>
