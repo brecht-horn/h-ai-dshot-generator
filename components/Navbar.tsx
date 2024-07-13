@@ -42,7 +42,7 @@ export default async function Navbar() {
         <Link href='/'>
           <Image
             src={headshotGeneratorAI_Logo}
-            height={90}
+            height={30}
             alt='Headshot Generator AI Logo'
           />
           {/* <h2 className='font-bold text-sky-400/100'>
