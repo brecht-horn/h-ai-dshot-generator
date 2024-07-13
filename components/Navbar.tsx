@@ -39,7 +39,7 @@ export default async function Navbar() {
       <div className='flex gap-2 h-full'>
         <Link href='/'>
           <h2 className='font-bold text-sky-400/100'>
-            h<b className='text-violet-600/100'>AI</b>
+            h<b className='text-violet-400/100'>AI</b>
             dshot Generator
           </h2>
         </Link>
