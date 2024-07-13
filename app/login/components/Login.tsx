@@ -102,7 +102,7 @@ export const Login = ({
     <>
       <div className='flex items-center justify-center p-8'>
         <div className='flex flex-col gap-4 bg-[#131324] dark:bg-[#131324] p-4 rounded-xl max-w-sm w-full'>
-          <h1 className='text-xl'>Welcome</h1>
+          <h1 className='text-xl text-violet-400'>Welcome</h1>
           <p className='text-xs text-gray-400 opacity-60'>
             Sign in or create an account to get started.
           </p>
