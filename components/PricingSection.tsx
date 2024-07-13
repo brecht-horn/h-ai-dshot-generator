@@ -11,7 +11,7 @@ export default function PricingSection() {
         {pricingOptions.map((option, index) => (
           <div
             key={index}
-            className={`flex flex-col border rounded-lg p-4 w-full lg:w-1/4 ${option.bgColor}`}
+            className={`flex flex-col border-violet-400 rounded-lg p-4 w-full lg:w-1/4 ${option.bgColor}`}
           >
             <div className='flex-grow space-y-4'>
               <h3 className='text-2xl text-violet-400/100 font-semibold text-center'>
@@ -26,8 +26,8 @@ export default function PricingSection() {
               <ul className='space-y-2 mb-4 pl-4'>
                 {option.features.map((feature, fIndex) => (
                   <li key={fIndex} className='flex items-center space-x-2'>
-                    <span className='text-green-500'>✔</span>
-                    <span>{feature}</span>
+                    <span className='text-violet-400'>✔</span>
+                    <span className='text-gray-400'>{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -62,7 +62,7 @@ const pricingOptions = [
       'Ideal for professionals requiring frequent updates to their profiles.',
     features: ['12 AI Headshots'],
     buttonText: 'Choose Basic',
-    bgColor: 'bg-[#21213a]',
+    bgColor: 'bg-[#080810]',
   },
   {
     title: 'Premium',
