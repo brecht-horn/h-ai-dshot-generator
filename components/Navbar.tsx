@@ -14,7 +14,8 @@ import { Button } from './ui/button';
 import React from 'react';
 import { Database } from '@/types/supabase';
 import ClientSideCredits from './realtime/ClientSideCredits';
-import headshotGeneratorAI_Logo from "../../headshotGeneratorAI_Logo.png"
+import headshotGeneratorAI_Logo from '../public/headshotGeneratorAI_Logo.png';
+import Image from 'next/image'
 
 export const dynamic = 'force-dynamic';
 
@@ -39,7 +40,7 @@ export default async function Navbar() {
     <div className='flex w-full px-4 bg-[#131324] lg:px-40 py-4 items-center border-b-slate-500 text-center gap-8 justify-between'>
       <div className='flex gap-2 h-full'>
         <Link href='/'>
-<img src={headshotGeneratorAI_Logo} style={{height:"90px"}}/>
+          <Image src={headshotGeneratorAI_Logo} style={{height:"90px"}}/>
           {/* <h2 className='font-bold text-sky-400/100'>
             h<b className='text-violet-400/100'>AI</b>
             dshot Generator */}
