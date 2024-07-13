@@ -43,8 +43,8 @@ export default async function Navbar() {
           <Image src={headshotGeneratorAI_Logo} height={90}/>
           {/* <h2 className='font-bold text-sky-400/100'>
             h<b className='text-violet-400/100'>AI</b>
-            dshot Generator */}
-          </h2>
+            dshot Generator
+          </h2> */}
         </Link>
       </div>
       {user && (
