@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }: any) {
   return (
     <html lang='en'>
-      <body className='min-h-screen flex flex-col bg-[#222246]'>
+      <body className='min-h-screen flex flex-col bg-[#1d1d3d]'>
         <section>
           <Suspense
             fallback={
