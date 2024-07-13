@@ -17,7 +17,7 @@ export default function RootLayout({ children }: any) {
         <section>
           <Suspense
             fallback={
-              <div className="flex w-full px-4 lg:px-40 py-4 items-center border-b text-center gap-8 justify-between h-[69px]" />
+              <div className="flex w-full px-4 lg:px-40 bg-[#222246] py-4 items-center border-b text-center gap-8 justify-between h-[69px]" />
             }
           >
             <Navbar />
