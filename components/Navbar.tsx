@@ -14,7 +14,7 @@ import { Button } from './ui/button';
 import React from 'react';
 import { Database } from '@/types/supabase';
 import ClientSideCredits from './realtime/ClientSideCredits';
-import headshotGeneratorAI_Logo from '../public/headshotGeneratorAI_Logo.png';
+import headshotGeneratorAI_Logo from '../public/headshotGeneratorAI_Logo2.png';
 import Image from 'next/image';
 
 export const dynamic = 'force-dynamic';
