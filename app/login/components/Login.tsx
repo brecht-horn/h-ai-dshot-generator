@@ -155,7 +155,11 @@ export const Login = ({
               // variant='outline'
               className='w-full'
               type='submit'
-              style={{ color: '#38bdf9', border: '1px solid #38bdf9' }}
+              style={{
+                color: 'white',
+                backgroundColor: '#255cda',
+                // border: '1px solid #38bdf9',
+              }}
             >
               Continue with Email
             </Button>
