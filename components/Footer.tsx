@@ -4,14 +4,14 @@ export default function Footer() {
   return (
     <footer className="text-center px-4 lg:px-40 py-4 h-12 sm:h-20 w-full sm:pt-2 pt-4 border-t mt-5 flex sm:flex-row flex-col justify-between items-center space-y-3 sm:mb-0 mb-3 border-gray-200">
       <div className="text-gray-500">
-        <Link
+        {/* <Link
           className="text-blue-600 hover:underline font-bold"
           href="https://github.com/leap-ai/headshots-starter"
           target="_blank"
         >
           Open-source
-        </Link>{" "}
-        powered by{" "}
+        </Link>{" "} */}
+        Powered by{" "}
         <Link
           className="text-blue-600 hover:underline font-bold"
           href="https://www.astria.ai/"
@@ -47,7 +47,7 @@ export default function Footer() {
       </div>
       <div className="flex space-x-4 pb-4 sm:pb-0">
         <Link
-          href="https://twitter.com/Astria_AI"
+          href="https://www.linkedin.com/in/brecht-horn/"
           className="group"
           aria-label="Twitter"
           target="_blank"
@@ -60,7 +60,7 @@ export default function Footer() {
           </svg>
         </Link>
         <Link
-          href="https://github.com/leap-ai/headshots-starter"
+          href="https://github.com/brecht-horn/h-ai-dshot-generator"
           className="group"
           aria-label="GitHub"
           target="_blank"

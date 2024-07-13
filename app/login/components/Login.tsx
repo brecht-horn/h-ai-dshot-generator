@@ -143,7 +143,8 @@ export const Login = ({
                 />
                 {isSubmitted && errors.email && (
                   <span className={'text-xs text-red-400'}>
-                    {errors.email?.message || 'Email is required to sign in'}
+                    {errors.email?.message ||
+                      'Email is required to log in or sign up'}
                   </span>
                 )}
               </div>
