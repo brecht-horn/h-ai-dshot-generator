@@ -26,7 +26,7 @@ export const WaitingForMagicLink = ({
               onClick={toggleState}
               variant='secondary'
               size='sm'
-              className='text-gray-400'
+              className='text-gray-400 bg-transparent'
             >
               <ArrowLeft size={14} />
               Go back
