@@ -27,7 +27,7 @@ export default function PricingSection() {
                 {option.features.map((feature, fIndex) => (
                   <li
                     key={fIndex}
-                    className='space-x-2'
+                    className='flex items-center space-x-2 pl-8 lg:pl-15'
                   >
                     <span className='text-violet-400'>✔</span>
                     <span className='text-gray-400'>{feature}</span>
