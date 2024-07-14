@@ -23,7 +23,7 @@ export default function PricingSection() {
               <p className='text-sm text-gray-400 text-center'>
                 {option.description}
               </p>
-              <ul className='flex items-center space-y-2 mb-4 pl-4'>
+              <ul className='flex items-center space-y-2 mb-4 pl-6'>
                 {option.features.map((feature, fIndex) => (
                   <li key={fIndex} className='flex items-center space-x-2'>
                     <span className='text-violet-400'>✔</span>
