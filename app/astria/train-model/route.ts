@@ -139,7 +139,7 @@ export async function POST(request: Request) {
         callback: trainWenhookWithParams,
         prompts_attributes: [
           {
-            text: `pixar style animated portrait of ohwx ${type} wearing a business suit, face like woody and buzz lightyear from Toy Story, professional photo, white background, disney style, dreamworks style`,
+            text: `pixar style animated portrait of ohwx ${type} wearing a business suit, face like woody and buzz lightyear from Toy Story, professional photo, animated office background, disney style, dreamworks style`,
             callback: promptWebhookWithParams,
             num_images: 8,
           },
