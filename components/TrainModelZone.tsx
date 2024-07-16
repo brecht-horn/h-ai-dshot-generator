@@ -26,7 +26,7 @@ import { upload } from '@vercel/blob/client';
 
 type FormInput = z.infer<typeof fileUploadFormSchema>;
 
-const stripeIsConfigured = 'true';
+const stripeIsConfigured = 'false';
 
 export default function TrainModelZone() {
   const [files, setFiles] = useState<File[]>([]);
@@ -127,6 +127,7 @@ export default function TrainModelZone() {
       urls: blobUrls,
       name: form.getValues('name').trim(),
       type: form.getValues('type'),
+      base_tune_id: 636337,
     };
 
     // Send the JSON payload to the "/astria/train-model" endpoint

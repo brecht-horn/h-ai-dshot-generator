@@ -19,7 +19,7 @@ import Image from 'next/image';
 
 export const dynamic = 'force-dynamic';
 
-const stripeIsConfigured = 'true';
+const stripeIsConfigured = 'false';
 
 export const revalidate = 0;
 
