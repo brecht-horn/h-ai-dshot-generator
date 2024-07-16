@@ -19,7 +19,7 @@ export default async function Index() {
       >
         <Link href="/overview" className="text-sm w-fit">
           <Button variant={"outline"}>
-            <FaArrowLeft className="mr-2" />
+            <FaArrowLeft className="mr-2 text-white" />
             Go Back
           </Button>
         </Link>
