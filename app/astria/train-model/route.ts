@@ -1,20 +1,20 @@
-import { Database } from "@/types/supabase";
-import { createRouteHandlerClient } from "@supabase/auth-helpers-nextjs";
-import axios from "axios";
-import { cookies } from "next/headers";
-import { NextResponse } from "next/server";
+import { Database } from '@/types/supabase';
+import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
+import axios from 'axios';
+import { cookies } from 'next/headers';
+import { NextResponse } from 'next/server';
 
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 
 const astriaApiKey = process.env.ASTRIA_API_KEY;
-const astriaTestModeIsOn = process.env.ASTRIA_TEST_MODE === "true";
+const astriaTestModeIsOn = process.env.ASTRIA_TEST_MODE === 'true';
 // For local development, recommend using an Ngrok tunnel for the domain
 
 const appWebhookSecret = process.env.APP_WEBHOOK_SECRET;
-const stripeIsConfigured = process.env.NEXT_PUBLIC_STRIPE_IS_ENABLED === "true";
+const stripeIsConfigured = false;
 
 if (!appWebhookSecret) {
-  throw new Error("MISSING APP_WEBHOOK_SECRET!");
+  throw new Error('MISSING APP_WEBHOOK_SECRET!');
 }
 
 export async function POST(request: Request) {
@@ -32,7 +32,7 @@ export async function POST(request: Request) {
   if (!user) {
     return NextResponse.json(
       {
-        message: "Unauthorized",
+        message: 'Unauthorized',
       },
       { status: 401 }
     );
@@ -42,7 +42,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         message:
-          "Missing API Key: Add your Astria API Key to generate headshots",
+          'Missing API Key: Add your Astria API Key to generate headshots',
       },
       {
         status: 500,
@@ -53,7 +53,7 @@ export async function POST(request: Request) {
   if (images?.length < 4) {
     return NextResponse.json(
       {
-        message: "Upload at least 4 sample images",
+        message: 'Upload at least 4 sample images',
       },
       { status: 500 }
     );
@@ -63,15 +63,15 @@ export async function POST(request: Request) {
   console.log({ stripeIsConfigured });
   if (stripeIsConfigured) {
     const { error: creditError, data: credits } = await supabase
-      .from("credits")
-      .select("credits")
-      .eq("user_id", user.id);
+      .from('credits')
+      .select('credits')
+      .eq('user_id', user.id);
 
     if (creditError) {
       console.error({ creditError });
       return NextResponse.json(
         {
-          message: "Something went wrong!",
+          message: 'Something went wrong!',
         },
         { status: 500 }
       );
@@ -80,7 +80,7 @@ export async function POST(request: Request) {
     if (credits.length === 0) {
       // create credits for user.
       const { error: errorCreatingCredits } = await supabase
-        .from("credits")
+        .from('credits')
         .insert({
           user_id: user.id,
           credits: 0,
@@ -90,7 +90,7 @@ export async function POST(request: Request) {
         console.error({ errorCreatingCredits });
         return NextResponse.json(
           {
-            message: "Something went wrong!",
+            message: 'Something went wrong!',
           },
           { status: 500 }
         );
@@ -99,7 +99,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           message:
-            "Not enough credits, please purchase some credits and try again.",
+            'Not enough credits, please purchase some credits and try again.',
         },
         { status: 500 }
       );
@@ -107,7 +107,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           message:
-            "Not enough credits, please purchase some credits and try again.",
+            'Not enough credits, please purchase some credits and try again.',
         },
         { status: 500 }
       );
@@ -124,7 +124,7 @@ export async function POST(request: Request) {
     const promptWebhookWithParams = `${promptWebhook}?user_id=${user.id}&webhook_secret=${appWebhookSecret}`;
 
     const API_KEY = astriaApiKey;
-    const DOMAIN = "https://api.astria.ai";
+    const DOMAIN = 'https://api.astria.ai';
 
     const body = {
       tune: {
@@ -133,8 +133,8 @@ export async function POST(request: Request) {
         // https://www.astria.ai/gallery/tunes/690204/prompts
         base_tune_id: 690204,
         name: type,
-        branch: astriaTestModeIsOn ? "fast" : "sd15",
-        token: "ohwx",
+        branch: astriaTestModeIsOn ? 'fast' : 'sd15',
+        token: 'ohwx',
         image_urls: images,
         callback: trainWenhookWithParams,
         prompts_attributes: [
@@ -152,9 +152,9 @@ export async function POST(request: Request) {
       },
     };
 
-    const response = await axios.post(DOMAIN + "/tunes", body, {
+    const response = await axios.post(DOMAIN + '/tunes', body, {
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
         Authorization: `Bearer ${API_KEY}`,
       },
     });
@@ -166,7 +166,7 @@ export async function POST(request: Request) {
       if (status === 400) {
         return NextResponse.json(
           {
-            message: "webhookUrl must be a URL address",
+            message: 'webhookUrl must be a URL address',
           },
           { status }
         );
@@ -174,7 +174,7 @@ export async function POST(request: Request) {
       if (status === 402) {
         return NextResponse.json(
           {
-            message: "Training models is only available on paid plans.",
+            message: 'Training models is only available on paid plans.',
           },
           { status }
         );
@@ -182,21 +182,21 @@ export async function POST(request: Request) {
     }
 
     const { error: modelError, data } = await supabase
-      .from("models")
+      .from('models')
       .insert({
         modelId: tune.id, // store tune Id field to retrieve workflow object if needed later
         user_id: user.id,
         name,
         type,
       })
-      .select("id")
+      .select('id')
       .single();
 
     if (modelError) {
-      console.error("modelError: ", modelError);
+      console.error('modelError: ', modelError);
       return NextResponse.json(
         {
-          message: "Something went wrong!",
+          message: 'Something went wrong!',
         },
         { status: 500 }
       );
@@ -205,7 +205,7 @@ export async function POST(request: Request) {
     // Get the modelId from the created model
     const modelId = data?.id;
 
-    const { error: samplesError } = await supabase.from("samples").insert(
+    const { error: samplesError } = await supabase.from('samples').insert(
       images.map((sample: string) => ({
         modelId: modelId,
         uri: sample,
@@ -213,10 +213,10 @@ export async function POST(request: Request) {
     );
 
     if (samplesError) {
-      console.error("samplesError: ", samplesError);
+      console.error('samplesError: ', samplesError);
       return NextResponse.json(
         {
-          message: "Something went wrong!",
+          message: 'Something went wrong!',
         },
         { status: 500 }
       );
@@ -225,10 +225,10 @@ export async function POST(request: Request) {
     if (stripeIsConfigured && _credits && _credits.length > 0) {
       const subtractedCredits = _credits[0].credits - 1;
       const { error: updateCreditError, data } = await supabase
-        .from("credits")
+        .from('credits')
         .update({ credits: subtractedCredits })
-        .eq("user_id", user.id)
-        .select("*");
+        .eq('user_id', user.id)
+        .select('*');
 
       console.log({ data });
       console.log({ subtractedCredits });
@@ -237,7 +237,7 @@ export async function POST(request: Request) {
         console.error({ updateCreditError });
         return NextResponse.json(
           {
-            message: "Something went wrong!",
+            message: 'Something went wrong!',
           },
           { status: 500 }
         );
@@ -247,7 +247,7 @@ export async function POST(request: Request) {
     console.error(e);
     return NextResponse.json(
       {
-        message: "Something went wrong!",
+        message: 'Something went wrong!',
       },
       { status: 500 }
     );
@@ -255,7 +255,7 @@ export async function POST(request: Request) {
 
   return NextResponse.json(
     {
-      message: "success",
+      message: 'success',
     },
     { status: 200 }
   );
