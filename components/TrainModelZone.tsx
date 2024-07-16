@@ -127,8 +127,8 @@ export default function TrainModelZone() {
       urls: blobUrls,
       name: form.getValues('name').trim(),
       type: form.getValues('type'),
-      base_tune_id: 636337,
     };
+    
 
     // Send the JSON payload to the "/astria/train-model" endpoint
     const response = await fetch('/astria/train-model', {
