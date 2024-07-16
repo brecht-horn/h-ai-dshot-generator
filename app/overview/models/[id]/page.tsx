@@ -47,7 +47,7 @@ export default async function Index({ params }: { params: { id: string } }) {
     <div id='train-model-container' className='w-full h-full'>
       <div className='flex flex-row gap-4'>
         <Link href='/overview' className='text-xs w-fit'>
-          <Button variant={'outline'} className='text-xs' size='sm'>
+          <Button variant={'outline'} className='text-xs text-white' size='sm'>
             <FaArrowLeft className='mr-2 text-white' />
             Go Back
           </Button>
