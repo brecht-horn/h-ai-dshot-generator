@@ -145,6 +145,7 @@ export default function TrainModelZone() {
       const responseData = await response.json();
       const responseMessage: string = responseData.message;
       console.error('Something went wrong! ', responseMessage);
+      console.log("responseData is", responseData)
       const messageWithButton = (
         <div className='flex flex-col gap-4'>
           {responseMessage}
