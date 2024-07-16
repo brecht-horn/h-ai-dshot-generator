@@ -139,12 +139,12 @@ export async function POST(request: Request) {
         callback: trainWenhookWithParams,
         prompts_attributes: [
           {
-            text: `pixar style animated portrait of ohwx ${type} wearing a business suit, face like woody and buzz lightyear from Toy Story, professional photo, animated office background, disney style, dreamworks style`,
+            text: `pixar style animated portrait of ohwx ${type} wearing a business suit, face like characters from the Toy Story movies, only one person, professional photo, animated city office background, eyebrows colors same as hair colors, disney style, dreamworks style`,
             callback: promptWebhookWithParams,
             num_images: 8,
           },
           {
-            text: `pixar style close up linkedin profile picture of ohwx ${type}, face like characters from the Incredibles movies, professional jack suite, professional headshots, disney style, dreamworks style`,
+            text: `pixar style close up linkedin profile picture of ohwx ${type}, face like characters from the Incredibles movies, professional jack suite, professional headshots, vignetted soft color background, disney style, dreamworks style`,
             callback: promptWebhookWithParams,
             num_images: 8,
           },
