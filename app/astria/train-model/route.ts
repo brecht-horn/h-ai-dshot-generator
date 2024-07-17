@@ -144,7 +144,7 @@ export async function POST(request: Request) {
             num_images: 8,
           },
           {
-            text: `pixar style close up linkedin profile picture of ohwx ${type}, face like characters from the Incredibles movies, professional jack suite, professional headshots, vignetted color background, disney style, dreamworks style`,
+            text: `pixar style close up linkedin profile picture of ohwx ${type}, face like characters from the Incredibles movies, professional jack suite, professional headshots, home office background, disney style, dreamworks style`,
             callback: promptWebhookWithParams,
             num_images: 8,
           },
