@@ -26,7 +26,7 @@ import { upload } from '@vercel/blob/client';
 
 type FormInput = z.infer<typeof fileUploadFormSchema>;
 
-const stripeIsConfigured = false;
+const stripeIsConfigured = process.env.NEXT_PUBLIC_STRIPE_IS_ENABLED === 'true'
 
 export default function TrainModelZone() {
   const [files, setFiles] = useState<File[]>([]);

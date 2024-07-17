@@ -11,7 +11,7 @@ const astriaTestModeIsOn = process.env.ASTRIA_TEST_MODE === 'true';
 // For local development, recommend using an Ngrok tunnel for the domain
 
 const appWebhookSecret = process.env.APP_WEBHOOK_SECRET;
-const stripeIsConfigured = false;
+const stripeIsConfigured = process.env.NEXT_PUBLIC_STRIPE_IS_ENABLED === 'true';
 
 if (!appWebhookSecret) {
   throw new Error('MISSING APP_WEBHOOK_SECRET!');
@@ -144,7 +144,7 @@ export async function POST(request: Request) {
             num_images: 8,
           },
           {
-            text: `pixar style close up linkedin profile picture of ohwx ${type}, face like characters from the Incredibles movies, professional jack suite, professional headshots, color backdrop, disney style, dreamworks style`,
+            text: `pixar style close up linkedin profile picture of ohwx ${type}, face like characters from the Incredibles movies, wearing a business suit, professional headshots, full color backdrops, disney style, dreamworks style`,
             callback: promptWebhookWithParams,
             num_images: 8,
           },
