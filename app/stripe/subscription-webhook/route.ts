@@ -4,6 +4,7 @@ import { headers } from "next/headers";
 import { streamToString } from "@/lib/utils";
 import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
+import { Database } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
@@ -120,14 +121,14 @@ export async function POST(request: Request) {
       );
       const quantity = lineItems.data[0].quantity;
       const priceId = lineItems.data[0].price!.id;
-      const sentId = lineItems.data[0].id;
+      const dataAt0 = lineItems.data[0]
       const creditsPerUnit = creditsPerPriceId[priceId];
       const totalCreditsPurchased = quantity! * creditsPerUnit;
 
       console.log({ lineItems });
       console.log({ quantity });
       console.log({ priceId });
-      console.log({ sentId });
+      console.log({ dataAt0 });
       console.log({ creditsPerUnit });
 
       console.log("totalCreditsPurchased: " + totalCreditsPurchased);
