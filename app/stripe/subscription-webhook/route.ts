@@ -119,14 +119,24 @@ export async function POST(request: Request) {
         checkoutSessionCompleted.id
       );
       const quantity = lineItems.data[0].quantity;
-      const priceId = lineItems.data[0].price!.id;
+      // const priceId = lineItems.data[0].price!.id;
+      let creditsPerUnit = 0
+      if (lineItems.data[0].amount_total === 1200){
+        creditsPerUnit = 1
+      }
+      if (lineItems.data[0].amount_total === 3000){
+        creditsPerUnit = 3
+      }
+      if (lineItems.data[0].amount_total === 4000){
+        creditsPerUnit = 5
+      }
       const dataAt0 = lineItems.data[0]
-      const creditsPerUnit = creditsPerPriceId[priceId];
+      // const creditsPerUnit = creditsPerPriceId[priceId];
       const totalCreditsPurchased = quantity! * creditsPerUnit;
 
       console.log({ lineItems });
       console.log({ quantity });
-      console.log({ priceId });
+      // console.log({ priceId });
       console.log({ dataAt0 });
       console.log({ creditsPerUnit });
 
