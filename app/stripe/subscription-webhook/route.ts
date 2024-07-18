@@ -4,7 +4,6 @@ import { headers } from "next/headers";
 import { streamToString } from "@/lib/utils";
 import Stripe from "stripe";
 import { createClient } from "@supabase/supabase-js";
-import { Database } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
