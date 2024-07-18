@@ -120,12 +120,14 @@ export async function POST(request: Request) {
       );
       const quantity = lineItems.data[0].quantity;
       const priceId = lineItems.data[0].price!.id;
+      const sentId = lineItems.data[0].id;
       const creditsPerUnit = creditsPerPriceId[priceId];
       const totalCreditsPurchased = quantity! * creditsPerUnit;
 
       console.log({ lineItems });
       console.log({ quantity });
       console.log({ priceId });
+      console.log({ sentId });
       console.log({ creditsPerUnit });
 
       console.log("totalCreditsPurchased: " + totalCreditsPurchased);
