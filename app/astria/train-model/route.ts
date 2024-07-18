@@ -143,14 +143,14 @@ export async function POST(request: Request) {
             negative_prompt:
               'painting, extra fingers, mutated hands, poorly drawn hands, ((poorly drawn face,)) deformed, ugly, blurry, bad anatomy, bad proportions, extra limbs, cloned face, skinny, glitchy, double torso, extra arms, extra hands, mangled fingers, missing lips, ugly face, distorted face, extra legs, anime, nude, NSFW',
             callback: promptWebhookWithParams,
-            num_images: 8,
+            num_images: 2,
           },
           {
-            text: `pixar style close up linkedin profile picture of ohwx ${type}, face like characters from the Incredibles movies, wearing a business suit, professional headshots, full color backdrops, disney style, dreamworks style`,
+            text: `pixar style animated linkedin profile picture of ohwx ${type}, face like characters from the Incredibles movies, wearing a business suit, professional headshots, full color backdrops, disney style, dreamworks style`,
             negative_prompt:
-              'painting, extra fingers, mutated hands, poorly drawn hands, ((poorly drawn face,)) deformed, ugly, blurry, bad anatomy, bad proportions, extra limbs, cloned face, skinny, glitchy, double torso, extra arms, extra hands, mangled fingers, missing lips, ugly face, distorted face, extra legs, anime, nude, NSFW',
+              'painting, grey background, extra fingers, mutated hands, poorly drawn hands, ((poorly drawn face,)) deformed, ugly, blurry, bad anatomy, bad proportions, extra limbs, cloned face, skinny, glitchy, double torso, extra arms, extra hands, mangled fingers, missing lips, ugly face, distorted face, extra legs, anime, nude, NSFW',
             callback: promptWebhookWithParams,
-            num_images: 8,
+            num_images: 2,
           },
         ],
       },
