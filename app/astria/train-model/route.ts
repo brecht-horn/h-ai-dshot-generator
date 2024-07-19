@@ -135,6 +135,7 @@ export async function POST(request: Request) {
         name: type,
         branch: astriaTestModeIsOn ? 'fast' : 'sd15',
         token: 'ohwx',
+        model_type: "faceid",
         image_urls: images,
         callback: trainWenhookWithParams,
         prompts_attributes: [
