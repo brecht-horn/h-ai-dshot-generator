@@ -147,7 +147,7 @@ export async function POST(request: Request) {
             num_images: 2,
           },
           {
-            text: `face like a character from pixar movies, ohwx ${type} in business suit, full color backdrops, disney, dreamworks`,
+            text: `animated face like a character from disney pixar movies, medium close up of ohwx ${type} in business suit, full color background, slightly caricaturized facial features`,
             // text: `pixar style animated linkedin profile picture of ohwx ${type}, face like characters from the Incredibles movies, wearing a business suit, professional headshots, full color backdrops, disney style, dreamworks style`,
             negative_prompt:
               'painting, grey background, extra fingers, mutated hands, poorly drawn hands, ((poorly drawn face,)) deformed, ugly, blurry, bad anatomy, bad proportions, extra limbs, cloned face, skinny, glitchy, double torso, extra arms, extra hands, mangled fingers, missing lips, ugly face, distorted face, extra legs, anime, nude, NSFW',
