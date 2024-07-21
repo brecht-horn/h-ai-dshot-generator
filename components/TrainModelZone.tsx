@@ -23,7 +23,9 @@ import { FaFemale, FaImages, FaMale, FaRainbow } from 'react-icons/fa';
 import * as z from 'zod';
 import { fileUploadFormSchema } from '@/types/zod';
 import { upload } from '@vercel/blob/client';
+import professional from '../public/professional.jpg';
 import animated from '../public/animated.png';
+import retro from '../public/retro.jpg';
 import Image from 'next/image';
 
 type FormInput = z.infer<typeof fileUploadFormSchema>;
@@ -240,7 +242,11 @@ export default function TrainModelZone() {
                   htmlFor='professional'
                   className='flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary'
                 >
-                  <FaMale className='mb-3 h-6 w-6' />
+                  <Image
+                    src={professional}
+                    className='mb-3 h-20 w-20'
+                    alt='animated'
+                  />
                   Professional
                 </Label>
               </div>
@@ -256,7 +262,11 @@ export default function TrainModelZone() {
                   htmlFor='animated'
                   className='flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary'
                 >
-                  <FaFemale className='mb-3 h-6 w-6' />
+                  <Image
+                    src={animated}
+                    className='mb-3 h-20 w-20'
+                    alt='animated'
+                  />
                   Animated
                 </Label>
               </div>
@@ -272,8 +282,8 @@ export default function TrainModelZone() {
                   className='flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary'
                 >
                   <Image
-                    src={animated}
-                    className='mb-3 h-10 w-10'
+                    src={retro}
+                    className='mb-3 h-20 w-20'
                     alt='animated'
                   />
                   Retro
