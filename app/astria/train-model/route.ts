@@ -140,7 +140,7 @@ export async function POST(request: Request) {
         callback: trainWenhookWithParams,
         prompts_attributes: [
           {
-            text: `1985 yearbook photo portrait of ohwx ${type} wearing a 1980's outfit, retro hairstyle,  accurate hair color, Amazing Details, Best Quality, Masterpiece, analog photo`,
+            text: `1989 yearbook photo portrait of ohwx ${type} wearing a 1980's outfit, retro hairstyle,  accurate hair color, Amazing Details, Best Quality, Masterpiece, analog photo`,
 
             // text: `face like a character from the Toy Story movies, ohwx ${type} wearing a business suit, only one person, photo accurate hair color, photo accurate eyebrow color, professional photo, animated office background with skyscrapers outside window, disney style, dreamworks style`,
 
@@ -154,7 +154,7 @@ export async function POST(request: Request) {
             num_images: 6,
           },
           {
-            text: `1980's style yearbook photo portrait of ohwx ${type} wearing a 1980's outfit, retro hair, 1980's hairstyle, retro outfit, accurate hair color, Saved By the Bell, Amazing Details, Best Quality, Masterpiece, analog photo`,
+            text: `1989 style yearbook photo portrait of ohwx ${type} wearing a 1989 style outfit, retro hair, 1989 style hairstyle, retro outfit, accurate hair color, Saved By the Bell, Amazing Details, Best Quality, Masterpiece, analog photo`,
 
             // text: 'man',
 
