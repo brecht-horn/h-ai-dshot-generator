@@ -128,6 +128,7 @@ export default function TrainModelZone() {
       urls: blobUrls,
       name: form.getValues('name').trim(),
       type: form.getValues('type'),
+      style: form.getValues('style'),
     };
 
     // Send the JSON payload to the "/astria/train-model" endpoint
