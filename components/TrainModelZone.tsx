@@ -23,6 +23,8 @@ import { FaFemale, FaImages, FaMale, FaRainbow } from 'react-icons/fa';
 import * as z from 'zod';
 import { fileUploadFormSchema } from '@/types/zod';
 import { upload } from '@vercel/blob/client';
+import animated from '../../public/animated.jpg';
+import Image from 'next/image';
 
 type FormInput = z.infer<typeof fileUploadFormSchema>;
 
@@ -215,9 +217,9 @@ export default function TrainModelZone() {
             )}
           />
           <div className='flex flex-col gap-4'>
-            <FormLabel>Type</FormLabel>
+            <FormLabel>Style</FormLabel>
             <FormDescription>
-              Select the type of headshots you want to generate.
+              Select the style of headshots you want to generate.
             </FormDescription>
             <RadioGroup
               defaultValue={modelStyle}
@@ -269,7 +271,7 @@ export default function TrainModelZone() {
                   htmlFor='retro'
                   className='flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary'
                 >
-                  <FaRainbow className='mb-3 h-6 w-6' />
+                  <Image src={animated} className='mb-3 h-6 w-6' alt='animated' />
                   Retro
                 </Label>
               </div>
