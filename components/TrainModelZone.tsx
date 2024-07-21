@@ -273,7 +273,7 @@ export default function TrainModelZone() {
                 >
                   <Image
                     src={animated}
-                    className='mb-3 h-6 w-6'
+                    className='mb-3 h-10 w-10'
                     alt='animated'
                   />
                   Retro
