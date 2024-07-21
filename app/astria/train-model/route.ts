@@ -131,7 +131,8 @@ export async function POST(request: Request) {
         title: name,
         // Hard coded tune id of Realistic Vision v5.1 from the gallery - https://www.astria.ai/gallery/tunes
         // https://www.astria.ai/gallery/tunes/690204/prompts
-        base_tune_id: 636337,
+        // base_tune_id: 636337,
+        base_tune_id: 690204,
         name: type,
         branch: astriaTestModeIsOn ? 'fast' : 'sd15',
         token: 'ohwx',
@@ -139,17 +140,30 @@ export async function POST(request: Request) {
         callback: trainWenhookWithParams,
         prompts_attributes: [
           {
+            text: `1985 yearbook photo portrait of ohwx ${type} wearing a 1980's outfit, retro hair, big hair, bouffant hair, Amazing Details, Best Quality, Masterpiece, analog photo`,
+
             // text: `face like a character from the Toy Story movies, ohwx ${type} wearing a business suit, only one person, photo accurate hair color, photo accurate eyebrow color, professional photo, animated office background with skyscrapers outside window, disney style, dreamworks style`,
-            text: `pixar style animated portrait of ohwx ${type} wearing a business suit, face like characters from the Toy Story movies, only one person, photo accurate hair color, photo accurate eyebrow color, professional photo, animated office background with skyscrapers outside window, disney style, dreamworks style`,
+
+            // text: `pixar style animated portrait of ohwx ${type} wearing a business suit, face like characters from the Toy Story movies, only one person, photo accurate hair color, photo accurate eyebrow color, professional photo, animated office background with skyscrapers outside window, disney style, dreamworks style`,
+
+            // text: `portrait of ohwx ${type} wearing a business suit, professional photo, white background, Amazing Details, Best Quality, Masterpiece, dramatic lighting highly detailed, analog photo, overglaze, 80mm Sigma f/1.4 or any ZEISS lens`,
+
             negative_prompt:
               'painting, cowboy outfit, plaid shirt, jeans, sherrif oufit, extra fingers, mutated hands, poorly drawn hands, ((poorly drawn face,)) deformed, ugly, blurry, bad anatomy, bad proportions, extra limbs, cloned face, glitchy, double torso, extra arms, extra hands, mangled fingers, missing lips, ugly face, distorted face, extra legs, anime, nude, NSFW',
             callback: promptWebhookWithParams,
             num_images: 6,
           },
           {
+            text: `1980's style yearbook photo portrait of ohwx ${type} wearing a 1980's outfit, retro hair, big hair, bouffant hair, retro outfit, Saved By the Bell, Amazing Details, Best Quality, Masterpiece, analog photo`,
+
             // text: 'man',
+
             // text: `ohwx ${type} wearing a business suit, face like characters from the Toy Story movies, photo accurate hair color, photo accurate eyebrow color, animated park in with benches background, disney style, dreamworks style`,
-            text: `pixar style animated linkedin profile picture of ohwx ${type}, face like characters from the Incredibles movies, wearing a business suit, professional headshots, full color backdrops, disney style, dreamworks style`,
+
+            // text: `pixar style animated linkedin profile picture of ohwx ${type} wearing a business suit, face like characters from the Incredibles movies, professional headshots, full color backdrops, disney style, dreamworks style`,
+
+            // text: `8k close up linkedin profile picture of ohwx ${type}, professional jack suite, professional headshots, photo-realistic, 4k, high-resolution image, workplace settings, upper body, modern outfit, professional suit, business, blurred background, glass building, office window`,
+
             negative_prompt:
               'painting, cowboy outfit, plaid shirt, jeans, sherrif oufit, grey background, gray background, extra fingers, mutated hands, poorly drawn hands, ((poorly drawn face,)) deformed, ugly, blurry, bad anatomy, bad proportions, extra limbs, cloned face, glitchy, double torso, extra arms, extra hands, mangled fingers, missing lips, ugly face, distorted face, extra legs, anime, nude, NSFW',
             callback: promptWebhookWithParams,
