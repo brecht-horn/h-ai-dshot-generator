@@ -29,14 +29,14 @@ export async function POST(request: Request) {
 
   const promptText1 =
     payload.style === 'retro'
-      ? `1987 yearbook photo portrait from the waist up of ohwx ${type} wearing a 1987 style outfit, retro hairstyle,  accurate hair color, Amazing Details, Best Quality, Masterpiece, analog photo`
+      ? `1987 style portrait from the waist up of ohwx ${type} wearing a 1987 style outfit, retro hairstyle,  accurate hair color, Amazing Details, Best Quality, Masterpiece, analog photo`
       : payload.style === 'professional'
       ? `portrait of ohwx ${type} wearing a business suit, professional photo, white background, Amazing Details, Best Quality, Masterpiece, dramatic lighting highly detailed, analog photo, overglaze, 80mm Sigma f/1.4 or any ZEISS lens`
       : `pixar style animated portrait of ohwx ${type} wearing a business suit, face like characters from the Toy Story movies, only one person, photo accurate hair color, photo accurate eyebrow color, professional photo, animated office background with skyscrapers outside window, disney style, dreamworks style`;
 
   const promptText2 =
     payload.style === 'retro'
-      ? `1989 style yearbook photo portrait of ohwx ${type} wearing a 1989 style outfit, retro hair, 1989 style hairstyle, retro outfit, accurate hair color, Saved By the Bell, Amazing Details, Best Quality, Masterpiece, analog photo`
+      ? `1989 style portrait of ohwx ${type} wearing a 1989 style outfit, retro hair, 1989 style hairstyle, retro outfit, accurate hair color, Saved By the Bell, Amazing Details, Best Quality, Masterpiece, analog photo`
       : payload.style === 'professional'
       ? `8k close up linkedin profile picture of ohwx ${type}, professional jack suite, professional headshots, photo-realistic, 4k, high-resolution image, workplace settings, upper body, modern outfit, professional suit, business, blurred background, glass building, office window`
       : `pixar style animated linkedin profile picture of ohwx ${type} wearing a business suit, face like characters from the Incredibles movies, professional headshots, full color backdrops, disney style, dreamworks style`;
