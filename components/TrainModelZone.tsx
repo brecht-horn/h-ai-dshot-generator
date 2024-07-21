@@ -172,7 +172,7 @@ export default function TrainModelZone() {
     toast({
       title: 'Model queued for training',
       description:
-        'The model was queued for training. You will receive an email when the model is ready to use.',
+        'The model was queued for training. Please check back or refresh the page in about 10 minutes.',
       duration: 5000,
     });
 
