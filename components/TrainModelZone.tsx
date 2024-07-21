@@ -23,7 +23,7 @@ import { FaFemale, FaImages, FaMale, FaRainbow } from 'react-icons/fa';
 import * as z from 'zod';
 import { fileUploadFormSchema } from '@/types/zod';
 import { upload } from '@vercel/blob/client';
-import animated from '../../public/animated.jpg';
+import animated from '../../public/animated.png';
 import Image from 'next/image';
 
 type FormInput = z.infer<typeof fileUploadFormSchema>;
@@ -271,7 +271,11 @@ export default function TrainModelZone() {
                   htmlFor='retro'
                   className='flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary'
                 >
-                  <Image src={animated} className='mb-3 h-6 w-6' alt='animated' />
+                  <Image
+                    src={animated}
+                    className='mb-3 h-6 w-6'
+                    alt='animated'
+                  />
                   Retro
                 </Label>
               </div>
