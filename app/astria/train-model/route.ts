@@ -29,7 +29,7 @@ export async function POST(request: Request) {
 
   const promptText1 =
     payload.style === 'retro'
-      ? `1987 style portrait from the waist up of ohwx ${type} wearing a 1987 style outfit, retro hairstyle,  accurate hair color, Amazing Details, Best Quality, Masterpiece, analog photo`
+      ? `1987 style portrait from the waist up of ohwx ${type} wearing a 1987 style outfit, retro hairstyle, accurate hair color, Amazing Details, Best Quality, Masterpiece, analog photo`
       : payload.style === 'professional'
       ? `portrait of ohwx ${type} wearing a business suit, professional photo, white background, Amazing Details, Best Quality, Masterpiece, dramatic lighting highly detailed, analog photo, overglaze, 80mm Sigma f/1.4 or any ZEISS lens`
       : `pixar style animated portrait of ohwx ${type} wearing a business suit, face like characters from the Toy Story movies, only one person, photo accurate hair color, photo accurate eyebrow color, professional photo, animated office background with skyscrapers outside window, disney style, dreamworks style`;
