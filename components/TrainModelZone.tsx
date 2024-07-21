@@ -26,7 +26,7 @@ import { upload } from '@vercel/blob/client';
 
 type FormInput = z.infer<typeof fileUploadFormSchema>;
 
-const stripeIsConfigured = process.env.NEXT_PUBLIC_STRIPE_IS_ENABLED === 'true'
+const stripeIsConfigured = process.env.NEXT_PUBLIC_STRIPE_IS_ENABLED === 'true';
 
 export default function TrainModelZone() {
   const [files, setFiles] = useState<File[]>([]);
@@ -39,6 +39,7 @@ export default function TrainModelZone() {
     defaultValues: {
       name: '',
       type: 'man',
+      style: 'professional',
     },
   });
 
@@ -128,7 +129,6 @@ export default function TrainModelZone() {
       name: form.getValues('name').trim(),
       type: form.getValues('type'),
     };
-    
 
     // Send the JSON payload to the "/astria/train-model" endpoint
     const response = await fetch('/astria/train-model', {
@@ -145,7 +145,7 @@ export default function TrainModelZone() {
       const responseData = await response.json();
       const responseMessage: string = responseData.message;
       console.error('Something went wrong! ', responseMessage);
-      console.log("responseData is", responseData)
+      console.log('responseData is', responseData);
       const messageWithButton = (
         <div className='flex flex-col gap-4'>
           {responseMessage}
@@ -183,6 +183,7 @@ export default function TrainModelZone() {
   });
 
   const modelType = form.watch('type');
+  const modelStyle = form.watch('style');
 
   return (
     <div>
@@ -212,6 +213,67 @@ export default function TrainModelZone() {
               </FormItem>
             )}
           />
+          <div className='flex flex-col gap-4'>
+            <FormLabel>Type</FormLabel>
+            <FormDescription>
+              Select the type of headshots you want to generate.
+            </FormDescription>
+            <RadioGroup
+              defaultValue={modelStyle}
+              className='grid grid-cols-3 gap-4'
+              value={modelStyle}
+              onValueChange={(value) => {
+                form.setValue('style', value);
+              }}
+            >
+              <div>
+                <RadioGroupItem
+                  value='professional'
+                  id='professional'
+                  className='peer sr-only'
+                  aria-label='professional'
+                />
+                <Label
+                  htmlFor='professional'
+                  className='flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary'
+                >
+                  <FaMale className='mb-3 h-6 w-6' />
+                  Professional
+                </Label>
+              </div>
+
+              <div>
+                <RadioGroupItem
+                  value='animated'
+                  id='animated'
+                  className='peer sr-only'
+                  aria-label='animated'
+                />
+                <Label
+                  htmlFor='animated'
+                  className='flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary'
+                >
+                  <FaFemale className='mb-3 h-6 w-6' />
+                  Animated
+                </Label>
+              </div>
+              <div>
+                <RadioGroupItem
+                  value='retro'
+                  id='retro'
+                  className='peer sr-only'
+                  aria-label='retro'
+                />
+                <Label
+                  htmlFor='retro'
+                  className='flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary'
+                >
+                  <FaRainbow className='mb-3 h-6 w-6' />
+                  Retro
+                </Label>
+              </div>
+            </RadioGroup>
+          </div>
           <div className='flex flex-col gap-4'>
             <FormLabel>Type</FormLabel>
             <FormDescription>

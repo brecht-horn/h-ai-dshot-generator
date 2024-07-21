@@ -22,6 +22,24 @@ export async function POST(request: Request) {
   const images = payload.urls;
   const type = payload.type;
   const name = payload.name;
+  const baseTuneId =
+    payload.style === 'retro' || payload.style === 'professional'
+      ? 690204
+      : 636337;
+
+  const promptText1 =
+    payload.style === 'retro'
+      ? 690204
+      : payload.style === 'professional'
+      ? 636337
+      : 'animated';
+
+  const promptText2 =
+    payload.style === 'retro'
+      ? 690204
+      : payload.style === 'professional'
+      ? 636337
+      : 'animated';
 
   const supabase = createRouteHandlerClient<Database>({ cookies });
 
