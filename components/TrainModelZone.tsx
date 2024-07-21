@@ -23,7 +23,7 @@ import { FaFemale, FaImages, FaMale, FaRainbow } from 'react-icons/fa';
 import * as z from 'zod';
 import { fileUploadFormSchema } from '@/types/zod';
 import { upload } from '@vercel/blob/client';
-import animated from '../../public/animated.png';
+import animated from '../public/animated.png';
 import Image from 'next/image';
 
 type FormInput = z.infer<typeof fileUploadFormSchema>;
