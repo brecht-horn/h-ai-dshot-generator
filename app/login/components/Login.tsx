@@ -10,6 +10,8 @@ import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { AiOutlineGoogle } from 'react-icons/ai';
 import { WaitingForMagicLink } from './WaitingForMagicLink';
+import Image from 'next/image';
+import Logo from '/public/HS_Logo1.png';
 
 type Inputs = {
   email: string;
@@ -100,8 +102,9 @@ export const Login = ({
 
   return (
     <>
-      <div className='flex items-center justify-center p-8'>
-        <div className='flex flex-col gap-4 bg-[#131324] dark:bg-[#131324] p-4 rounded-xl max-w-sm w-full'>
+      <div className='flex flex-col items-center justify-center p-2'>
+        <Image src={Logo} height="100" alt="logo"/>
+        <div className='flex flex-col gap-4 bg-[#131324] dark:bg-[#131324] p-4 rounded-xl max-w-sm w-full mt-5'>
           <h1 className='text-xl text-violet-400'>Welcome</h1>
           <p className='text-xs text-gray-400 opacity-60'>
             Sign in or create an account to get started.
