@@ -62,7 +62,7 @@ const pricingOptions = [
     title: 'Basic',
     price: '3 Credits',
     description:
-      'Perfect if you want to get one set of headshots in each style!',
+      'Perfect if you want to get one set of headshots in each style.',
     features: ['30 AI Headshots'],
     buttonText: 'Choose Basic',
     bgColor: 'bg-[#080810]',
