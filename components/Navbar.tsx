@@ -14,7 +14,7 @@ import { Button } from './ui/button';
 import React from 'react';
 import { Database } from '@/types/supabase';
 import ClientSideCredits from './realtime/ClientSideCredits';
-import headshotGeneratorAI_Logo from '../public/headshotGeneratorAI_Logo2.png';
+import headshotGeneratorAI_Logo from '../public/HS_Logo1.png';
 import Image from 'next/image';
 
 export const dynamic = 'force-dynamic';
@@ -53,9 +53,9 @@ export default async function Navbar() {
       </div>
       {user && (
         <div className='lg:flex flex-row gap-2 text-white'>
-          <Link href='/overview'>
+          {/* <Link href='/overview'>
             <Button variant={'ghost'}>Home</Button>
-          </Link>
+          </Link> */}
           {stripeIsConfigured && (
             <Link href='/get-credits'>
               <Button variant={'ghost'}>Get Credits</Button>

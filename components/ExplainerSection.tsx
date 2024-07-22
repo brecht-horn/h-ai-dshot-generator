@@ -61,7 +61,7 @@ export default function ExplainerSection() {
           </h3>
         </div>
         <p className='text-sm text-gray-400 text-center'>
-          Once your model is trained, we'll give you amazing headshots!
+          Once your model is trained, we'll give you amazing headshots in your selected style!
         </p>
         <img
           src={result.src}
