@@ -2,6 +2,8 @@
 
 Get Retro, Animated, or Professional AI headshots in minutes. Perfect for social profiles, portfolios, or resumes.
 
+<img width="1377" alt="Screenshot 2024-07-23 at 12 36 25 PM" src="https://github.com/user-attachments/assets/d3e8e758-a31c-43f6-9dda-889f6eb12dcd">
+
 ## How It Works
 
 Visit the site **[here](https://headshawty.com)**.
