@@ -34,7 +34,7 @@ export default async function Index() {
             style={{ marginLeft: '-5px', marginBottom: '-20px' }}
             alt='Logo'
           />
-          <h1 className='text-5xl font-bold text-violet-400/100'>
+          <h1 className='sm:text-2xl md:text-5xl font-bold text-violet-400/100'>
             Your One and Only Bae for AI Headshots.
           </h1>
           <p className='text-white text-lg'>
