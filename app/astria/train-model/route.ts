@@ -170,7 +170,7 @@ export async function POST(request: Request) {
             negative_prompt:
               'painting, cowboy outfit, plaid shirt, jeans, sherrif oufit, extra fingers, mutated hands, poorly drawn hands, ((poorly drawn face,)) deformed, ugly, blurry, bad anatomy, bad proportions, extra limbs, cloned face, glitchy, double torso, extra arms, extra hands, mangled fingers, missing lips, ugly face, distorted face, extra legs, anime, nude, NSFW',
             callback: promptWebhookWithParams,
-            num_images: 6,
+            num_images: 5,
           },
           {
             text: promptText2,
@@ -187,7 +187,7 @@ export async function POST(request: Request) {
             negative_prompt:
               'painting, cowboy outfit, plaid shirt, jeans, sherrif oufit, grey background, gray background, extra fingers, mutated hands, poorly drawn hands, ((poorly drawn face,)) deformed, ugly, blurry, bad anatomy, bad proportions, extra limbs, cloned face, glitchy, double torso, extra arms, extra hands, mangled fingers, missing lips, ugly face, distorted face, extra legs, anime, nude, NSFW',
             callback: promptWebhookWithParams,
-            num_images: 6,
+            num_images: 5,
           },
         ],
       },
