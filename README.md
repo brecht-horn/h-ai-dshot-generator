@@ -38,8 +38,6 @@ If you get distorted results with multiple faces, repeated subjects, multiple li
 - Add "double torso, totem pole" to the negative prompt when generating.
 - Make sure your dimensions when generating are also 1:1 with the same height / width ratios of the samples.
 
-For more information on how to improve quality, read the blog [here](https://blog.tryleap.ai/create-an-ai-headshot-generator-fine-tune-stable-diffusion-with-leap-api/#step-1-gather-your-image-samples-%F0%9F%93%B8).
-
 ### Created By:
 
 Brecht Horn [GitHub](https://github.com/brecht-horn) | [LinkedIn](https://www.linkedin.com/in/brecht-horn-a9b839213/)
