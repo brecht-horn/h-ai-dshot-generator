@@ -121,13 +121,13 @@ export async function POST(request: Request) {
       const quantity = lineItems.data[0].quantity;
       // const priceId = lineItems.data[0].price!.id;
       let creditsPerUnit = 0
-      if (lineItems.data[0].amount_total === 1200){
+      if (lineItems.data[0].amount_total === 1499){
         creditsPerUnit = 1
       }
-      if (lineItems.data[0].amount_total === 3000){
+      if (lineItems.data[0].amount_total === 3499){
         creditsPerUnit = 3
       }
-      if (lineItems.data[0].amount_total === 4000){
+      if (lineItems.data[0].amount_total === 5499){
         creditsPerUnit = 5
       }
       const dataAt0 = lineItems.data[0]
