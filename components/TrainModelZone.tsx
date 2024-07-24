@@ -79,15 +79,15 @@ export default function TrainModelZone() {
         });
       }
 
-      // check that in total images do not exceed a combined 4.5MB
+      // check that in total images do not exceed a combined 6 MB
       const totalSize = files.reduce((acc, file) => acc + file.size, 0);
       const newSize = newFiles.reduce((acc, file) => acc + file.size, 0);
 
-      if (totalSize + newSize > 4.5 * 1024 * 1024) {
+      if (totalSize + newSize > 6 * 1024 * 1024) {
         toast({
           title: 'Images exceed size limit',
           description:
-            'The total combined size of the images cannot exceed 4.5MB.',
+            'The total combined size of the images cannot exceed 6 MB.',
           duration: 5000,
         });
         return;
