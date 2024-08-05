@@ -26,7 +26,7 @@ export default async function Index() {
   }
 
   return (
-    <div className='flex flex-col items-center pt-1'>
+    <div className='flex flex-col items-center pt-0'>
       <div className='flex flex-col lg:flex-row items-center gap-8 p-8 max-w-6xl w-full'>
         <div className='flex flex-col space-y-4 lg:w-1/2 w-full'>
           <Image
@@ -34,8 +34,8 @@ export default async function Index() {
             style={{ marginLeft: '-5px', marginBottom: '-20px' }}
             alt='Logo'
           />
-          <h1 className='sm:text-2xl md:text-5xl font-bold text-violet-400/100'>
-            Your One and Only Bae for AI Headshots.
+          <h1 className='sm:text-3xl lg:text-4xl font-bold text-violet-400/100'>
+            Your Bae for AI Headshots.
           </h1>
           <p className='text-white text-lg'>
             Get{' '}
